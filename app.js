@@ -1,23 +1,23 @@
 // Maor Aharon 208253625
 // Or Jerbi 318851177
 // Dayana Pergement 315522201
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
 //var apiRouter = require('./routes/api');
-var aboutRouter = require('./routes/about');
-var reportRouter = require('./routes/report');
-var addcostRouter = require('./routes/addcost');
+const aboutRouter = require('./routes/about');
+const reportRouter = require('./routes/report');
+const addcostRouter = require('./routes/addcost');
 
 
-var app = express();
+let app = express();
 mongoose.connect('mongodb+srv://maor:101010@cluster0.vowbs48.mongodb.net/?retryWrites=true&w=majority');
 mongoose.Promise = global.Promise;
 
